@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DashboardApplication<dashboard>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.webdashboard.dashboard.DashboardApplication",
+            "projectName": "dashboard",
+            "args": ""
+        }
+    ]
+}
