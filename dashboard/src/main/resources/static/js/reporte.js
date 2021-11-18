@@ -34,6 +34,8 @@ function obtenerReportePrestamos() {
                                                     '<td>' + element.telefono_solicitante + '</td>' +
                                                 '</tr>')
                 });
+
+                demo.showNotification('top','right','Biblioteca', "Reporte de prestamos cargado correctamente", 2);
             }else
             {
                 demo.showNotification('top','right','Biblioteca', jsonData.descripcion , 3);
