@@ -1,5 +1,10 @@
-google.charts.load('current', {'packages':['corechart']});
+$("#navTitleName").html("Dashboard");
+$("#navReporte").removeClass("active");
+$("#navDashboard").addClass("active");
 
+demo.showNotification('top','right','Biblioteca', 'Inicio de sesión exitoso ¡Bienvenid@!', 2);
+
+google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(graficoPrincipal);
 
 function graficoPrincipal() {
@@ -7,8 +12,6 @@ function graficoPrincipal() {
         url: "api/dashboard/indicadores",
         dataType: "json",
       }).done(function (jsonData) {
-        console.log(jsonData);
-
         $("#cant_solicitantes").html("" + jsonData.cantidad_solicitantes + " Solicitantes");
 
         var data = new google.visualization.DataTable();
@@ -38,6 +41,6 @@ function graficoPrincipal() {
         chart.draw(data);
 
       }).fail(function (jq, text, err) {
-        console.log(text + ' - ' + err);
+        demo.showNotification('top','right','Biblioteca', 'No se pudo procesar la solicitud de carga indicadores para los graficos', 4);
       });
 }
