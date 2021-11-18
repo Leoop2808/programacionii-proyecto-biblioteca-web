@@ -16,7 +16,7 @@ function graficoPrincipal() {
         }
         else
         {
-          if(jsonData.codigo == 1 && jsonData.lista_prestamos != null && jsonData.lista_prestamos.length > 0)
+          if(jsonData.codigo == 1)
           {
               $("#cant_solicitantes").html("" + jsonData.cantidad_solicitantes + " Solicitantes");
 
